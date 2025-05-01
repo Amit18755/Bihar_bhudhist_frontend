@@ -32,10 +32,10 @@ const ContactUs = () => {
       // Reset the form
       setFormData({ name: "", email: "", phone_number: "", message: "" });
 
-      // Redirect after 2 seconds
+      // Redirect after 3 seconds
       setTimeout(() => {
         navigate("/");
-      }, 1000);
+      }, 3000);
     } catch (error) {
       console.error("Error submitting form:", error);
       alert("Failed to submit message.");

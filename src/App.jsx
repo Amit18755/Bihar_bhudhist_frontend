@@ -29,7 +29,7 @@ import UpdateProfile from "./pages/UpdateProfile";
 function App() {
   const location = useLocation();
 
-  // 🆕 Hide Navbar/Footer for specific paths
+  // Hide Navbar/Footer for specific paths
   const hideNavbarFooterPaths = ["/superUserDashboard", "/create-user", "/change-password","/update-user","/add-links", "/addNewLinks", "/update-profile",
    "/update-link/:id", "/adminDashboard","/add-image", "/add-tourist", "/add-touristSites", "/update-tourist/:id", "/modify-image" ];
   const hideNavbarFooter = hideNavbarFooterPaths.includes(location.pathname);

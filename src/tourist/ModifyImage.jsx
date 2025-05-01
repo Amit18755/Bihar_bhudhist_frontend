@@ -46,7 +46,7 @@ const ModifyImage = () => {
       .then(() => {
         setImages(prev => prev.filter(img => img.id !== id));
         setFeedback({ type: 'success', message: 'Image deleted successfully!' });
-        setTimeout(() => setFeedback(null), 2000);
+        setTimeout(() => setFeedback(null), 3000);
       })
       .catch(() => {
         setFeedback({ type: 'error', message: 'Failed to delete image.' });

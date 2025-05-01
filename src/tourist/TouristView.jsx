@@ -86,7 +86,7 @@ const TouristView = () => {
         setMessage({ type: '', text: '' });
         setShowDeleteModal(false);
         navigate('/add-tourist?refresh=true');
-      }, 1000);
+      }, 3000);
     }
   };
 

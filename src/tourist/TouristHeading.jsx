@@ -14,7 +14,7 @@ const TouristHeading = () => {
       navigate("/adminDashboard");
     } else {
       toast.info("Redirecting to Home Page");
-      setTimeout(() => navigate("/"), 1000);
+      setTimeout(() => navigate("/"), 3000);
     }
   };
 

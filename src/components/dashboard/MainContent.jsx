@@ -22,7 +22,7 @@ const MainContent = () => {
     if (updateSuccess) {
       const timer = setTimeout(() => {
         setUpdateSuccess("");
-      }, 1000);
+      }, 3000);
       return () => clearTimeout(timer);
     }
   }, [updateSuccess]);

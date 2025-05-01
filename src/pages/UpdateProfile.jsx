@@ -43,7 +43,7 @@ const UpdateProfile = () => {
     } catch (err) {
       setError(true);
       setMessage("Failed to fetch user data");
-      setTimeout(() => setMessage(""), 1000);
+      setTimeout(() => setMessage(""), 3000);
     }
   };
   
@@ -77,7 +77,7 @@ const UpdateProfile = () => {
       setTimeout(() => {
         setMessage("");
         navigate(-1); 
-      }, 1000);
+      }, 3000);
     } catch (err) {
       const apiError = err.response?.data;
       setError(true);
@@ -88,7 +88,7 @@ const UpdateProfile = () => {
       } else {
         setMessage("Update failed.");
       }
-      setTimeout(() => setMessage(""), 1000);
+      setTimeout(() => setMessage(""), 3000);
     }
   };
 

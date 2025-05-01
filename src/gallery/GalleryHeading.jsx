@@ -24,14 +24,14 @@ const GalleryHeading = () => {
     else if (role === "admin") navigate("/adminDashboard");
     else {
       toast.info("Redirecting to Home Page");
-      setTimeout(() => navigate("/"), 1000);
+      setTimeout(() => navigate("/"), 3000);
     }
   };
 
   const handleAdd = async () => {
     if (!placeName || !district) {
       setMessage({ text: "Both fields are required", type: "error" });
-      setTimeout(() => setMessage({ text: "", type: "" }), 2000);
+      setTimeout(() => setMessage({ text: "", type: "" }), 3000);
       return;
     }
 
@@ -58,11 +58,11 @@ const GalleryHeading = () => {
         setMessage({ text: "", type: "" });
         setShowAddModal(false);
         navigate("/add-image?refresh=true");
-      }, 2000);
+      }, 3000);
     } catch (error) {
       const errorMsg = error.response?.data?.detail || "Failed to add place. Try again.";
       setMessage({ text: errorMsg, type: "error" });
-      setTimeout(() => setMessage({ text: "", type: "" }), 2000);
+      setTimeout(() => setMessage({ text: "", type: "" }), 3000);
     }
   };
 

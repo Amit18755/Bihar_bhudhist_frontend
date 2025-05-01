@@ -105,16 +105,16 @@ const TouristUpdate = () => {
             setTimeout(() => {
               setMessage({ type: '', text: '' });
               navigate('/add-tourist');
-            }, 2000);
+            }, 3000);
           } else {
             const errorData = await response.json();
             setMessage({ type: 'error', text: errorData.detail || 'Update failed.' });
-            setTimeout(() => setMessage({ type: '', text: '' }), 2000);
+            setTimeout(() => setMessage({ type: '', text: '' }), 3000);
           }
         } catch (err) {
           console.error(err);
           setMessage({ type: 'error', text: 'Something went wrong.' });
-          setTimeout(() => setMessage({ type: '', text: '' }), 2000);
+          setTimeout(() => setMessage({ type: '', text: '' }), 3000);
         }
       };
       

@@ -24,7 +24,7 @@ const ChangePassword = () => {
     if (message.content) {
       const timer = setTimeout(() => {
         setMessage({ type: "", content: "" });
-      }, 1000);
+      }, 3000);
       return () => clearTimeout(timer);
     }
   }, [message]);

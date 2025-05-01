@@ -1,5 +1,5 @@
 const BASE_URL = import.meta.env.VITE_API_BASE_URL;
-
+// created a standard way for API
 const API = {
   USER: {
     LOGIN: `${BASE_URL}/api/user/login/`,

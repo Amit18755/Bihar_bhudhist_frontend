@@ -76,11 +76,11 @@ const AddNewLinks = () => {
         setTimeout(() => {
           setMessage({ type: "", text: "" });
           navigate("/add-links");
-        }, 2000);
+        }, 3000);
       } else {
         const err = await response.json();
         setMessage({ type: "error", text: err.detail || "Failed to add link." });
-        setTimeout(() => setMessage({ type: "", text: "" }), 2000);
+        setTimeout(() => setMessage({ type: "", text: "" }), 3000);
       }
     } catch (error) {
       setMessage({ type: "error", text: "Something went wrong." });

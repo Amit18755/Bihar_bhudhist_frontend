@@ -111,7 +111,7 @@ const Overview = () => {
         setTimeout(() => {
           setFeedback(null);
           setShowUpdateModal(false);
-        }, 1000);
+        }, 3000);
       })
       .catch(() => {
         setFeedback({ type: 'error', message: 'Failed to update overview.' });
@@ -168,7 +168,7 @@ const Overview = () => {
                 }
               });
 
-          }, 1000);
+          }, 3000);
           } else {
             setImageFeedback({ type: 'error', message: res.data.message });
           }

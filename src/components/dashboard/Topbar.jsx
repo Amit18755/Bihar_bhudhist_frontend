@@ -9,7 +9,7 @@ const Topbar = ({ toggleSidebar }) => {
   const navigate = useNavigate();
 
   const username = useSelector((state) => state.user.username);
-  const role = useSelector((state) => state.user.role); // get role from redux
+  const role = useSelector((state) => state.user.role); // getting role from redux
 
   const handleLogout = () => {
     Cookies.remove("access_token");

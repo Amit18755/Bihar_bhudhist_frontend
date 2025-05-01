@@ -71,7 +71,7 @@ const RegisterUser = () => {
     if (cleanedData.password !== cleanedData.repassword) {
       setError(true);
       setMessage("Passwords do not match!");
-      setTimeout(() => setMessage(""), 2000);
+      setTimeout(() => setMessage(""), 3000);
       return;
     }
   
@@ -107,7 +107,7 @@ const RegisterUser = () => {
         setMessage("");
         clearForm();
         navigate("/superUserDashboard");
-      }, 2000);
+      }, 3000);
     } catch (err) {
         const apiErrors = err.response?.data;
         setError(true);

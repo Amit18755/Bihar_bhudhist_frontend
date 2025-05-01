@@ -15,7 +15,7 @@ const Signup = () => {
   const clearMessage = () => {
     setTimeout(() => {
       setErrorMessage(null);
-    }, 2000);
+    }, 3000);
   };
 
   const handleSubmit = async (e) => {

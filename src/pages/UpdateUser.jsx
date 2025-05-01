@@ -78,9 +78,9 @@ const UpdateUser = () => {
   
       showMessage('success', 'Role updated successfully!');
       setTimeout(() => {
-        setShowModal(false); // close modal
-        fetchUsers();        // refresh user list
-      }, 1000);
+        setShowModal(false); 
+        fetchUsers();        
+      }, 3000);
     } catch (error) {
       showMessage('error', 'Failed to update role.');
     }
@@ -89,7 +89,7 @@ const UpdateUser = () => {
 
   const showMessage = (type, text) => {
     setMessage({ type, text });
-    setTimeout(() => setMessage({ type: '', text: '' }), 1000);
+    setTimeout(() => setMessage({ type: '', text: '' }), 3000);
   };
 
   return (

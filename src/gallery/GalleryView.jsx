@@ -101,10 +101,10 @@ const GalleryView = () => {
         setShowDeleteModal(false);
         setMessage({ text: "", type: "" });
         setSelectedPlaceId(null);
-      }, 1000);
+      }, 3000);
     } catch (error) {
       setMessage({ text: "Failed to delete place. Try again.", type: "error" });
-      setTimeout(() => setMessage({ text: "", type: "" }), 1000);
+      setTimeout(() => setMessage({ text: "", type: "" }), 3000);
     }
   };
 
@@ -125,7 +125,7 @@ const GalleryView = () => {
   const handleImageUpload = async () => {
     if (!selectedFile || !selectedPlaceId) {
       setMessage({ text: "Image or place ID missing.", type: "error" });
-      setTimeout(() => setMessage({ text: "", type: "" }), 1000);
+      setTimeout(() => setMessage({ text: "", type: "" }), 3000);
       return;
     }
 
@@ -169,19 +169,19 @@ const GalleryView = () => {
           setSelectedFile(null);
           setMessage({ text: "", type: "" });
           navigate("/add-image?refresh=true");
-        }, 2000);
+        }, 3000);
       } else {
         const err = await response.json();
         setMessage({
           text: err.message || "Failed to upload image. Try again.",
           type: "error",
         });
-        setTimeout(() => setMessage({ text: "", type: "" }), 2000);
+        setTimeout(() => setMessage({ text: "", type: "" }), 3000);
       }
     } catch (error) {
       console.error("Upload error:", error);
       setMessage({ text: "Something went wrong.", type: "error" });
-      setTimeout(() => setMessage({ text: "", type: "" }), 1000);
+      setTimeout(() => setMessage({ text: "", type: "" }), 3000);
     }
   };
 
@@ -208,14 +208,14 @@ const GalleryView = () => {
           setSelectedImageId(null);
           setMessage({ text: "", type: "" });
           navigate("/add-image?refresh=true");
-        }, 1000);
+        }, 3000);
       } else {
         throw new Error("Unexpected response");
       }
     } catch (error) {
       console.error("Failed to delete image:", error);
       setMessage({ text: "Failed to delete image. Try again.", type: "error" });
-      setTimeout(() => setMessage({ text: "", type: "" }), 1000);
+      setTimeout(() => setMessage({ text: "", type: "" }), 3000);
     }
   };
 

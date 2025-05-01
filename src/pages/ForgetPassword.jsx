@@ -61,7 +61,7 @@ const ForgetPassword = () => {
     }
   
     try {
-      // Step 1: Reset password
+      // step1: Reset password
       await axios.post(API.USER.FORGET_PASSWORD, {
         username: cleanUsername,
         otp,
@@ -97,7 +97,7 @@ const ForgetPassword = () => {
           console.error("Auto login failed:", loginErrorText);
           showMessage(loginErrorText, "error");
         }
-      }, 1000); // wait for DB consistency
+      }, 3000);  
     } catch (err) {
       const errorText = err.response?.data?.detail || "Failed to reset password";
       console.error("Password reset error:", errorText);

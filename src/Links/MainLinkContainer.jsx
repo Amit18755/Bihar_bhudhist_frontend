@@ -78,7 +78,7 @@ const MainLinkContainer = () => {
           setMessage({ text: "", type: "" });
           setShowDeleteModal(false);
           navigate("/add-links");
-        }, 1000);
+        }, 3000);
       } else {
         const errorData = await response.json();
         throw new Error(errorData?.message || "Failed to delete link.");
@@ -91,7 +91,7 @@ const MainLinkContainer = () => {
 
       setTimeout(() => {
         setMessage({ text: "", type: "" });
-      }, 2000);
+      }, 3000);
     }
   };
 
